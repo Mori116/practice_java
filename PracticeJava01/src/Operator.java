@@ -1,10 +1,9 @@
-
 public class Operator {
 	public static void main(String[] args) {
 		int a;
-	    int b;
-	    a = 20;
-	    b = a + 5;
+		int b;
+		a = 20;
+		b = a + 5;
 		System.out.println(a);
 		System.out.println(b);
 
@@ -12,7 +11,7 @@ public class Operator {
 		// エスケープシーケンスの使用(¥または\)
 		System.out.println("私の好きな記号は(\")です");
 		/* 以下の文だと、コンパイルエラーになる。
-		   System.out.println("私の好きな記号は(")です"); */
+		System.out.println("私の好きな記号は(")です"); */
 		System.out.println("この商品は¥¥1000です");
 
 
@@ -53,7 +52,7 @@ public class Operator {
 
 
 		/* キャスト演算子：強制的な型変換し、大きな型から小さな型へ代入する
-		   よほどのことがない限り使用しない */
+		よほどのことがない限り使用しない */
 		int age = (int)3.2; // 3.2をint型に変換して代入
 		System.out.println(age);
 

@@ -1,18 +1,17 @@
-
 public class Method {
 	public static void main(String[] args) {
 		// メソッド
 		// 改行せずに画面に文字を表示する
-        String name = "ささき";
-        System.out.print("私の名前は");
-        System.out.print(name);
-        System.out.print("です");
+		String name = "ささき";
+		System.out.print("私の名前は");
+		System.out.print(name);
+		System.out.print("です");
 
-        // 2つの値を比較して大きい方を取得する
-        int m = 2;
-        int n = 3;
-        int o = Math.max(m, n);
-        System.out.println("比較実験：" + m + "と" + n + "で大きい方は・・・" + o);
+		// 2つの値を比較して大きい方を取得する
+		int m = 2;
+		int n = 3;
+		int o = Math.max(m, n);
+		System.out.println("比較実験：" + m + "と" + n + "で大きい方は・・・" + o);
 
 		// 文字列を数値に変換する
 		String p = "30";
@@ -32,11 +31,7 @@ public class Method {
 
 
 
-		int x = 5;
-		int y = 10;
-		String ans = "x+yは" + (x + y);
-		System.out.println(ans);
-
+		// 練習：占い
 		System.out.println("ようこそ占いの館へ");
 		System.out.println("あなたの名前を入力してください");
 		String last_name = new java.util.Scanner(System.in).nextLine();
@@ -48,6 +43,5 @@ public class Method {
 		System.out.println("占いの結果が出ました！");
 		System.out.println(age_01 + "歳の" + last_name + "さん、あなたの運気番号は" + fortune + "です");
 		System.out.println("1:大吉 2:中吉 3:吉 4:凶");
-
 	}
 }
