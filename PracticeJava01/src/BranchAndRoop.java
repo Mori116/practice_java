@@ -1,11 +1,10 @@
-
 public class BranchAndRoop {
 	public static void main(String[] args) {
 		// if文：条件分岐文
 		boolean tenki = true;
 		if (tenki == true) {
 		    System.out.println("洗濯する");
-		System.out.println("散歩する");
+		    System.out.println("散歩する");
 		} else {
 		    System.out.println("DVDを観る");
 		}
@@ -21,7 +20,7 @@ public class BranchAndRoop {
 		// 文字列を比較する場合、==ではなくequalsを使用する
 		String otenki = "晴れ";
 		if (otenki.equals("晴れ")) {
-		System.out.println("ショッピングします");
+			System.out.println("ショッピングします");
 		} else {
 		    System.out.println("映画を観ます");
 		}
@@ -46,24 +45,24 @@ public class BranchAndRoop {
 		int fortune = new java.util.Random().nextInt(4) + 1;
 		switch (fortune) {
 		    case 1: // コロン(:)を記述する
-		System.out.println("大吉!");
-		break; // 記述を忘れると次の文に処理が進んでしまう
-		case 2:
-		    System.out.println("中吉");
-		    break;
-		case 3:
-		    System.out.println("吉");
-		    break;
-		default: // if文でのelseと同じ
-		System.out.println("凶");
+		    	System.out.println("大吉!");
+		    	break; // 記述を忘れると次の文に処理が進んでしまう
+			case 2:
+			    System.out.println("中吉");
+			    break;
+			case 3:
+			    System.out.println("吉");
+			    break;
+			default: // if文でのelseと同じ
+				System.out.println("凶");
 		}
 
 
 		// while文：繰り返し文
 		boolean doorClose = false;
 		while (doorClose == true) { // 13行目でtrueを代入した場合、15,16行目がループ処理される。
-		System.out.println("ノックする");
-		System.out.println("1分待つ");
+			System.out.println("ノックする");
+			System.out.println("1分待つ");
 		}
 
 		// do-while文：ブロックを実行した後に条件判定を行う
@@ -83,8 +82,8 @@ public class BranchAndRoop {
 		    for (int k = 1; k < 10; k++) {
 		        System.out.print(j * k);
 		        System.out.print(" ");
-		}
-		System.out.println("");
+		    }
+		    System.out.println("");
 		}
 		/* 外側のループ1回目→内側のループk < 10まで繰り返す→外側のループ2回目→内側のループk < 10まで繰り返す
 		の処理を外側のループj < 10まで繰り返す */
@@ -111,15 +110,15 @@ public class BranchAndRoop {
 		switch (selected) {
 		    case 1:
 		        System.out.println("検索します");
-		    break;
-		case 2:
-		    System.out.println("登録します");
-		    break;
-		case 3:
-		    System.out.println("削除します");
-		    break;
-		case 4:
-		    System.out.println("変更します");
+		        break;
+			case 2:
+			    System.out.println("登録します");
+			    break;
+			case 3:
+			    System.out.println("削除します");
+			    break;
+			case 4:
+			    System.out.println("変更します");
 		        break;
 		}
 
@@ -129,12 +128,12 @@ public class BranchAndRoop {
 		int ans = new java.util.Random().nextInt(10);
 		for (int i = 0; i < 5; i++) {
 		    System.out.println("0から9の数字を入力してください");
-		int num = new java.util.Scanner(System.in).nextInt();
-		if (num == ans) {
-		    System.out.println("一致しました！アタリです！");
-		    break;
-		} else {
-		    System.out.println("違います");
+		    int num = new java.util.Scanner(System.in).nextInt();
+		    if (num == ans) {
+			    System.out.println("一致しました！アタリです！");
+			    break;
+		    } else {
+		    	System.out.println("違います");
 		    }
 		}
 		System.out.println("ゲームを終了します");
