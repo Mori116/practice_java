@@ -60,7 +60,7 @@ public class BranchAndRoop {
 
 		// while文：繰り返し文
 		boolean doorClose = false;
-		while (doorClose == true) { // 13行目でtrueを代入した場合、15,16行目がループ処理される。
+		while (doorClose == true) { // 62行目でtrueを代入した場合、64,65行目がループ処理される。
 			System.out.println("ノックする");
 			System.out.println("1分待つ");
 		}
