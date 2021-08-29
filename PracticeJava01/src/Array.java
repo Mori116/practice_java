@@ -40,7 +40,7 @@ public class Array {
 		System.out.println("平均点は" + avg + "点です");
 
 		// 50点以上の教科がいくつあるか：if文の使用
-		int count =0;
+		int count = 0;
 		for (int i = 0; i < scores03.length; i++) {
 			if (scores03[i] >= 50) {
 				count++;
@@ -74,7 +74,7 @@ public class Array {
 		// null：意図的に配列を参照されないようにする
 		int[] array = {1, 2, 3};
 		array = null;
-		/* 74行目でnullを代入したため、エラーが発生する
+		/* 76行目でnullを代入したため、エラーが発生する
 		array[0] = 10; */
 
 
