@@ -5,6 +5,8 @@ public class PlayGame {
 		// Monsterインスタンスを生成
 		Monster m00 = new Monster();
 		Monster m01 = new Monster();
+		// Clergymanインスタンスを生成
+		Clergyman c = new Clergyman();
 
 		// Heroのフィールドに初期値をセットする
 		h.name = "ヒロ"; // 変数名.フィールド名 = 値;
@@ -17,11 +19,15 @@ public class PlayGame {
 		m00.hp = 50;
 		m01.name = 'B';
 		m01.hp = 40;
+		// Clergymanのフィールドに初期値をセットする
+		c.name = "セイ";
 
 		// 各メソッドを呼び出す
 		h.slip();
 		h.sit(5);
 		h.slip();
+		c.selfAld();
+		c.pray(2);
 		m00.runAway();
 		m01.runAway();
 		h.runAway();
