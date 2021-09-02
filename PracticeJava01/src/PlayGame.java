@@ -7,13 +7,20 @@ public class PlayGame {
 		Monster m01 = new Monster();
 		// Clergymanインスタンスを生成
 		Clergyman c = new Clergyman();
+		// Swordインスタンスを生成
+		Sword s = new Sword();
 
 		// Heroのフィールドに初期値をセットする
 		h.name = "ヒロ"; // 変数名.フィールド名 = 値;
 		h.level = 10;
 		h.hp = 100;
+		// Swordのフィールドに初期値をセットする
+		s.name = "雷剣";
+		s.damage = 5;
+		h.sword = s; // HeroのswordフィールドにSwordインスタンスを代入
 		System.out.println("勇者" + h.name + "が誕生しました！");
 		System.out.println("ステータス：レベル" + h.level + "、HP" + h.hp);
+		System.out.println(h.sword.name + "を手に入れた！");
 		// Monsterのフィールドに初期値をセットする
 		m00.name = 'A';
 		m00.hp = 50;
@@ -28,6 +35,7 @@ public class PlayGame {
 		h.slip();
 		c.selfAld();
 		c.pray(2);
+		h.attack();
 		m00.runAway();
 		m01.runAway();
 		h.runAway();

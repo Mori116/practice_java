@@ -3,6 +3,7 @@ public class Hero {
 	String name;
 	int level;
 	int hp;
+	Sword sword; // Swordクラス(Sword型):フィールドにクラス型の変数の宣言が可能
 
 	// 操作の定義
 	public void sleep() {
@@ -26,6 +27,10 @@ public class Hero {
 		System.out.println(this.name + "は逃げ出した！");
 		System.out.println("ゲームオーバー...");
 		System.out.println("最終のHPは" + this.hp + "でした");
+	}
+
+	public void attack() {
+		System.out.println(this.name + "は" + this.sword.name + "で攻撃を繰り出した！");
 	}
 
 }
