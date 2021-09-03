@@ -33,4 +33,13 @@ public class Hero {
 		System.out.println(this.name + "は" + this.sword.name + "で攻撃を繰り出した！");
 	}
 
+	public Hero(String name) { // コンストラクタ：JVMによって呼び出されるもののため、mainメソッド内等に呼び出すことはできない
+		this.hp = 100; // hpフィールドを100で初期化
+		this.name = name;
+	}
+
+	public Hero() { // コンストラクタもオーバーロード可能
+		this("ゆうた"); // 同じクラス内の別のコンストラクタの呼び出しをJVMに依頼→hp = 100, name = "ゆうた"が代入される
+	}
+
 }
