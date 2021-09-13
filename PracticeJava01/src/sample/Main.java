@@ -15,6 +15,12 @@ public class Main {
 		} else {
 			System.out.println("違う内容です");
 		}
+
+		Hero.money = 100;  // moneyはHeroクラス共通のフィールド ※インスタンスをnewしていなくても利用可能（クラス変数）
+		System.out.println(Hero.money);
+		System.out.println(h.money);
+		h1.money = 300; // h1に代入するとHero.moneyに反映され、h.moneyでも300となる
+		System.out.println(h.money);
 	}
 
 }
