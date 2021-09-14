@@ -21,4 +21,8 @@ public class Hero { // extendsで親指定していない場合、自動的にja
 		}
 		return false;
 	}
+
+	public static void setRandomMoney() {
+		Hero.money = (int) (Math.random() * 1000);
+	}
 }
