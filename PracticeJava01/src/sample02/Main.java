@@ -36,5 +36,48 @@ public class Main {
 		String s04 = "Java programming";
 		System.out.println("文字列s04の4文字目以降は" + s04.substring(3));
 		System.out.println("文字列s04の4~8文字目は" + s04.substring(3, 8)); // 指定した8は結果に含まれない;
+
+
+		// 文字列の変換
+		String s05 = "Java";
+		System.out.println("小文字へ変換" + s05.toLowerCase());
+		System.out.println("大文字へ変換" + s05.toUpperCase());
+
+
+		// 文字列の連結
+		StringBuilder sb = new StringBuilder(); // +演算子を使用するより処理が速い
+		for (int i = 0; i < 10; i++) { // 文字列を10回連結する
+			sb.append("Java");
+		}
+		String s = sb.toString();
+		System.out.println(s);
+
+
+		// マッチング
+		String a = "Java";
+		a.matches("Java"); // true
+		a.matches("java"); // false
+		"Java".matches("J.va"); // 1文字目J、2文字目は何でもOK、3文字目はv、4文字目はaであれば、true
+		a.matches("Ja.*"); // Jaで始まる任意の文字
+
+
+		// 文字列の分割
+		String b = "ab,cd:ef";
+		String[] words = b.split("[,:]"); // ,と:で文字列を分割する
+		for (String w : words) {
+			System.out.print(w + "->");
+		}
+
+
+		// 文字列の置換
+		String c = "ab,cd:ef";
+		String w = c.replaceAll("[bdf]","X");
+		System.out.println(w);
+
+
+		// 文字列の表示揃え
+		String d = String.format("%sを%d日間勉強しよう", "Java", 30);
+		System.out.println(d);
+		System.out.printf("%sを%d日間勉強しよう", "Java", 30); // formatの使用と同時に画面に表示する場合
 	}
 }
