@@ -1,7 +1,10 @@
 package sample02;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date; // 日時の利用;
 
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// 文字列処理について
 		String s00 = "Hello,Java";
 		String s01 = "Java";
@@ -79,5 +82,31 @@ public class Main {
 		String d = String.format("%sを%d日間勉強しよう", "Java", 30);
 		System.out.println(d);
 		System.out.printf("%sを%d日間勉強しよう", "Java", 30); // formatの使用と同時に画面に表示する場合
+
+
+		// 日時
+		Date now = new Date(); // 現在の日時
+		System.out.println(now);
+		System.out.println(now.getTime());
+		Date past = new Date(1600705425827L);
+		System.out.println(past);
+
+		// 読みやすい日時表示にする：CalendarやSimpleDateFormatは使いづらい等、問題点を抱えている...
+		Calendar e = Calendar.getInstance();
+		e.set(2019,8,22,1,23,45); // 6つのint型からDateインスタンスを生成する
+		e.set(Calendar.MONTH, 9); // 月を9(10月)に変更する
+		Date f = e.getTime();
+		System.out.println(f);
+		Date now01 = new Date(); // Dateインスタンスからint値を生成する
+		e.setTime(now01);
+		int y = e.get(Calendar.YEAR); // 年を取り出す
+		System.out.println("今年は" + y + "年");
+
+		SimpleDateFormat g = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		Date h = g.parse("2020/09/01 01:23:23"); // 文字列からDateインスタンスを生成する
+		System.out.println(h);
+		Date now02 = new Date(); // Dateインスタンスから文字列を生成する
+		String i = g.format(now02);
+		System.out.println("現在は" + i + "です");
 	}
 }
