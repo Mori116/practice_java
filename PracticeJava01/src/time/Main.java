@@ -3,9 +3,12 @@ package time;
 import java.text.SimpleDateFormat;
 // Time API
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Period;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -69,6 +72,34 @@ public class Main {
 		// LocalDateTimeとZonedDateTimeの相互変換
 		ZonedDateTime z4 = l2.atZone(ZoneId.of("Europe/London"));
 		LocalDateTime l3 = z4.toLocalDateTime();
+
+
+		// 特定の日時
+		// 文字列からLocalDateを生成
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+		LocalDate ldate = LocalDate.parse("2021/09/19", fmt);
+
+		// 1000日後を計算
+		LocalDate ldatep = ldate.plusDays(1000);
+		String str = ldatep.format(fmt);
+		System.out.println("1000日後は" + str + "です");
+
+		// 現在の日付との比較
+		LocalDate now03 = LocalDate.now();
+		if (now03.isAfter(ldatep)) {
+			System.out.println("1000日後は過去の日付です");
+		}
+
+		// Periodクラスの利用
+		LocalDate d1 = LocalDate.of(2021, 9, 1);
+		LocalDate d2 = LocalDate.of(2021, 9, 4);
+
+		// 3日間を表す：2通り
+		Period p1 = Period.ofDays(3);
+		Period p2 = Period.between(d1, d2);
+
+		// d2のさらに3日後
+		LocalDate d3 = d2.plus(p2);
 
 	}
 }
