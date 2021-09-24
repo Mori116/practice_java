@@ -24,5 +24,19 @@ public class Main {
 	    	}
     	}
     }
+
+
+    // 例外インスタンスを自分で投げる
+    Person p = new Person();
+    p.setAge(-125); // 例外発生
+
+
+    // オリジナルの例外
+    try {
+    	// 試験的に例外を発生させる
+    	throw new UnsupportedMusicFileException("未対応のファイルです");
+    } catch(Exception e) {
+    	e.printStackTrace();
+    }
 	}
 }
